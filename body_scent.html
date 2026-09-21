@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Scent - เติมเต็มเสน่ห์ที่เป็นตัวเอง</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Prompt:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">BODY SCENT</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">หน้าแรก</a></li>
+          <li><a href="product.html" class="nav-link">สินค้าทั้งหมด</a></li>
+          <li><a href="admin.html" class="nav-link">ผู้ดูแลระบบ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-content">
+      <p class="section-subtitle">EAU DE PARFUM & BODY MIST</p>
+      <h1 class="hero-title font-heading">
+        Body Scent เติมเต็มเสน่ห์ที่เป็นตัวเองในทุกช่วงเวลา<br>
+        ด้วยความหอมที่สะท้อน Mood & Tone ของคุณได้อย่างลงตัว
+      </h1>
+      <div style="margin-top: 2rem;">
+        <a href="product.html" class="btn btn-outline">ดูสินค้าทั้งหมด</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">FRAGRANCE COLLECTION</span>
+        <h2>ค้นหากลิ่นที่สะท้อน Mood & Tone ของคุณ</h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="mood-grid">
+        <!-- Mood 1: Fresh -->
+        <a href="product.html?mood=fresh" class="mood-card mood-fresh">
+          <div class="mood-header">
+            <span class="mood-dot"></span>
+            <h3>Fresh</h3>
+          </div>
+          <p>สัมผัสความโปร่ง สะอาด และเบาสบายที่ช่วยปลุกความสดชื่น ให้คุณรู้สึกตื่นตัวและมีพลังพร้อมรับวันใหม่อย่างสดใส</p>
+          <span class="card-link">สำรวจกลิ่น Fresh &rarr;</span>
+        </a>
+
+        <!-- Mood 2: Sweet -->
+        <a href="product.html?mood=sweet" class="mood-card mood-sweet">
+          <div class="mood-header">
+            <span class="mood-dot"></span>
+            <h3>Sweet</h3>
+          </div>
+          <p>ความหวานแผ่วเบาที่ให้ความรู้สึกอ่อนโยนและน่ารัก สร้างบรรยากาศอบอุ่น สบายใจ ละมุนหัวใจในทุกสัมผัส</p>
+          <span class="card-link">สำรวจกลิ่น Sweet &rarr;</span>
+        </a>
+
+        <!-- Mood 3: Confident -->
+        <a href="product.html?mood=confident" class="mood-card mood-confident">
+          <div class="mood-header">
+            <span class="mood-dot"></span>
+            <h3>Confident</h3>
+          </div>
+          <p>สะท้อนความนิ่ง สุขุม และสะอาดดูดีอย่างมีระดับ เพิ่มความน่าเชื่อถือ เสริมความมั่นใจให้คุณพร้อมลุยทุกสถานการณ์</p>
+          <span class="card-link">สำรวจกลิ่น Confident &rarr;</span>
+        </a>
+
+        <!-- Mood 4: Romance -->
+        <a href="product.html?mood=romance" class="mood-card mood-romance">
+          <div class="mood-header">
+            <span class="mood-dot"></span>
+            <h3>Romance</h3>
+          </div>
+          <p>เสน่ห์ความหอมหวานลุ่มลึกที่ชวนหลงใหล ให้ความรู้สึกอบอุ่น เย้ายวน และสร้างความประทับใจที่ไม่ลืมเลือน</p>
+          <span class="card-link">สำรวจกลิ่น Romance &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">BODY SCENT</div>
+      <p class="footer-text">&copy; 2026 BODY SCENT. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
