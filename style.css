@@ -1,0 +1,338 @@
+/* ==========================================================================
+   Room Scent - Premium Minimalist Design System
+   ========================================================================== */
+
+/* Google Fonts Import: Cormorant Garamond / Noto Serif Thai (Serif) & Prompt (Sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Prompt:wght@200;300;400;500&display=swap');
+
+:root {
+  /* Core Palette - Warm Luxury Neutrals */
+  --color-bg-primary: #FAF8F5;       /* ขาวนวลสว่างโปร่ง */
+  --color-bg-surface: #FFFFFF;       /* ขาวบริสุทธิ์สำหรับ Card */
+  --color-bg-secondary: #F2ECE4;     /* ครีมอ่อนนุ่มตา */
+  --color-bg-tertiary: #E8DFD5;      /* เบจกลางอ่อน */
+  
+  --color-text-main: #2A2623;        /* ชาโคลเข้มอมน้ำตาลนุ่มตา */
+  --color-text-muted: #6E6760;       /* เทาเบจสำหรับข้อความรอง */
+  --color-text-light: #9A9188;       /* เบจสว่างสำหรับ Label/Caption */
+
+  /* Luxury Accent - Soft Bronze / Subtle Gold */
+  --color-accent-gold: #C5A059;      /* ทองบรอนซ์นุ่มนวล */
+  --color-accent-gold-hover: #A8833E;/* ทองบรอนซ์เข้มเมื่อ Hover */
+  --color-border: #E5DDD3;           /* เส้นขอบบางเฉียบ */
+  --color-border-dark: #2A2623;      /* เส้นขอบเข้มสำหรับปุ่ม Minimal */
+
+  /* Mood Accents (แตะเบาๆ แค่จุด/เส้น ไม่ทาเต็มพื้นหลัง) */
+  --mood-fresh: #2D5A37;             /* เขียวเข้มพรีเมียม */
+  --mood-sweet: #6A4C80;             /* ม่วงกลางนุ่มนวล */
+  --mood-confident: #2C3E50;         /* น้ำเงินเทาเข้มสุขุม */
+  --mood-romance: #A84242;           /* แดงอ่อนโรแมนติก */
+
+  /* Typography Settings */
+  --font-serif: 'Cormorant Garamond', 'Noto Serif Thai', serif;
+  --font-sans: 'Prompt', sans-serif;
+
+  /* Layout Spacing (เน้นระยะห่างเยอะ ให้ความรู้สึกโปร่ง luxury) */
+  --container-max-width: 1240px;
+  --section-padding-desktop: 120px 24px;
+  --section-padding-mobile: 60px 16px;
+  --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Base Reset & Globals */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Containers & Layout Helpers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: var(--section-padding-desktop);
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, .brand-logo {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--color-text-main);
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.subheading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-accent-gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Minimal Buttons & Interactive Links */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--color-border-dark);
+  background: transparent;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.btn:hover {
+  background: var(--color-text-main);
+  color: var(--color-bg-primary);
+}
+
+.btn-accent {
+  border-color: var(--color-accent-gold);
+  color: var(--color-accent-gold);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-gold);
+  color: #ffffff;
+}
+
+.btn-sm {
+  padding: 10px 24px;
+  font-size: 0.75rem;
+}
+
+/* Filter Navigation / Mood Indicators */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent-gold);
+  transition: all 0.3s var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.tab-btn:hover, .tab-btn.active {
+  color: var(--color-text-main);
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+/* Product Grid & Card Styling */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 48px 32px;
+}
+
+.product-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(42, 38, 35, 0.05);
+}
+
+/* Aspect ratio box for product images */
+.product-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-bg-secondary);
+  overflow: hidden;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--transition-smooth);
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.04);
+}
+
+/* Mood Subtle Accents (จุดเล็กๆ ใต้ชื่อหรือบน Card) */
+.mood-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+/* Colors for Mood Dot & Subtle Line Accents */
+.mood-fresh .mood-dot, .mood-line.mood-fresh { background-color: var(--mood-fresh); }
+.mood-sweet .mood-dot, .mood-line.mood-sweet { background-color: var(--mood-sweet); }
+.mood-confident .mood-dot, .mood-line.mood-confident { background-color: var(--mood-confident); }
+.mood-romance .mood-dot, .mood-line.mood-romance { background-color: var(--mood-romance); }
+
+.mood-line {
+  height: 2px;
+  width: 24px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Card Content Details */
+.product-title {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.product-size {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-bg-secondary);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-text-main);
+}
+
+/* Header & Footer Essentials */
+header {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-primary);
+}
+
+footer {
+  background: var(--color-bg-secondary);
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-padding-mobile);
+  }
+
+  .filter-tabs {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 32px 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
