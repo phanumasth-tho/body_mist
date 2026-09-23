@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ฟังก์ชันสร้างปุ่มกรองสินค้า
     function setupFilterButtons() {
       if (!filterBar) return;
-      const categories = ['ทั้งหมด', 'Fresh', 'Relax', 'Focus', 'Romance'];
+      const categories = ['ทั้งหมด', 'Fresh', 'Sweet', 'Confident', 'Romance'];
       
       filterBar.innerHTML = categories.map(mood => `
         <button type="button" class="filter-btn ${mood === activeMood ? 'active' : ''}" data-mood="${mood}">
